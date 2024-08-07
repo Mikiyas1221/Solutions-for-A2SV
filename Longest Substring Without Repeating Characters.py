@@ -4,14 +4,10 @@ class Solution:
         i = 0
         size = 0
         for j in range(len(s)):
-            if s[j] not in seen:
-                seen = s[i:j+1]
-            
-            else:
+            if s[j] in s[i:j]:
                 while s[i] != s[j]:
                     i += 1
                 i += 1
-                seen = s[i:j+1]
-            size = max(size, len(seen))
+            size = max(size, j - i + 1)
         return size
         
