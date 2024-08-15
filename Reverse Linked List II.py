@@ -9,7 +9,7 @@ class Solution:
         dummy.next = head
         prev = dummy
 
-        while not head and not head.next:
+        if not head and not head.next:
             return head
         
         for i in range(left - 1):
@@ -24,8 +24,3 @@ class Solution:
             then = start.next
 
         return dummy.next
-
-        return head
-
-        
-        
